@@ -66,7 +66,6 @@ function App() {
             for (let i = 0; i < allWords.length; i++) {
                 let reg = new RegExp(matchStr, 'g')
                 let occCount = (allWords[i].toLocaleLowerCase().match(reg) || []).length
-                console.log('occCount ', i, occCount, allWords[i])
                 if (typeof occCount === 'number') {
                     count += occCount
                 }
@@ -79,7 +78,6 @@ function App() {
     }
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        debugger
         if (query !== '' && query.replace(/\s/g, '').length ) {
             await dispatch(getTopicsResults({
                 q: encodeURI(query),
