@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         searchLabel: {minWidth: 250},
         left: {
-            flex: 3,גק
+            flex: 3,
             flexDirection: 'column',
             padding: 20,
             display: 'flex',
